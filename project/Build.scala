@@ -14,9 +14,9 @@ import play.Play.autoImport._
 
 object ApplicationBuild extends Build {
 
-  val appName         = "rubberchicken"
+  val appName         = "bananja"
   val appVersion      = "0.1"
-  val appOrganization    =  "com.asurion"
+  val appOrganization    =  "com.bananja"
   val playVersion = "2.3.3"
   val scalaLangVersion = "2.11.1"
 
