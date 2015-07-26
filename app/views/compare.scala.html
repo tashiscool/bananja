@@ -1,0 +1,55 @@
+@()
+@main("Compare")("Compare your stats to the industry standard."){
+<div class="callout callout--title">
+    <div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Compare</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="callout">
+    <div class="container">
+		<div class="row chart-group">
+			<div class="col-xs-12 col-sm-6">
+				<h2>Your salary vs. industry standard</h2>
+				<p>Here's how your salary and compensation compare to the industry.</p>
+				<p><b>Job title:</b> Senior Manager</p>
+				<p><b>Benefits:</b> Medical, Dental, 401k</p>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<div class="chart-wrap">
+					<canvas id="compareChart"></canvas>
+				</div>
+				<p class="chart-info">Source: stuff.com</p>
+			</div>
+		</div>
+		<div class="row chart-group">
+			<div class="col-xs-12 col-sm-3 text-center">
+				<h3>Your skills</h3>
+				<p>Here's a breakdown of your skills.</p>
+				<div class="chart-wrap">
+					<canvas id="compareChartSkills"></canvas>								
+				</div>
+				<p>Source: your input</p>
+			</div>
+			<div class="col-xs-12 col-sm-3 text-center">
+				<h3>Industry skills</h3>
+				<p>Here's a breakdown of their skills.</p>
+				<div class="chart-wrap">
+					<canvas id="compareChartSkills2"></canvas>					
+				</div>
+				<p class="chart-info">Source: stuff.com</p>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<h2>Bananja</h2>
+
+			</div>	
+		</div>
+	</div>
+</div>
+}{
+	<script src="@routes.Assets.versioned("javascripts/compare.js")"></script>
+}
