@@ -1,0 +1,90 @@
+@import "imports";
+
+.background-gradient(@startColour:@basecolor1, @endColour:@basecolor1) {
+    background: @basecolor1; /* Old browsers */
+    background: -moz-linear-gradient(top, @startColour 0%, @endColour 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColour), color-stop(100%, @endColour)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @startColour 0%, @endColour 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @startColour 0%, @endColour 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @startColour 0%, @endColour 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @startColour 0%, @endColour 100%); /* W3C */
+}
+
+.box-shadow-inset(@offx, @offy, @blur, @spread, @color) {
+    -moz-box-shadow:    inset @offx @offy @blur @spread @color;
+    -webkit-box-shadow: inset @offx @offy @blur @spread @color;
+    box-shadow:         inset @offx @offy @blur @spread @color;
+}
+
+.font-size(@pixelValue : 14) {
+    @remValue: (@pixelValue/10);
+    font-size: ~"@{pixelValue}px" !important;
+    font-size: ~"@{remValue}rem" !important;
+}
+
+.icon-font(@pixelValue) {
+    @remValue: (@pixelValue/10);
+    font-size: ~"@{pixelValue}px" !important;
+    font-size: ~"@{remValue}rem" !important;
+}
+
+.skew(@x, @y) {
+    -webkit-transform: skew(@x, @y);
+    -ms-transform:     skewX(@x) skewY(@y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+    transform:         skew(@x, @y);
+}
+
+.ellipsis() {
+    overflow:      hidden;
+    text-overflow: ellipsis;
+    white-space:   nowrap;
+}
+
+.bootstrap-glyph() {
+    position:                relative;
+    top:                     1px;
+    display:                 inline-block;
+    font-family:             'Glyphicons Halflings';
+    font-style:              normal;
+    font-weight:             normal;
+    line-height:             1;
+    -webkit-font-smoothing:  antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// prevent the user from selecting text
+.no-select() {
+    -webkit-user-select: none;
+    -khtml-user-select:  none;
+    -moz-user-select:    none;
+    -o-user-select:      none;
+    user-select:         none;
+    cursor:              default;
+}
+
+.ul-inline() {
+    list-style:    none;
+    overflow:      hidden;
+    margin-bottom: 0;
+    padding:       0;
+
+    li {
+        display: inline-block;
+        margin:  0 10px 5px 0;
+    }
+
+}
+
+.list-defaults() {
+    float:      left;
+    list-style: none;
+    margin:     0;
+    padding:    0;
+    position:   relative;
+}
+
+.hub-border-wrap() {
+    border:        1px solid @grey6;
+    border-bottom: 4px solid @grey6;
+    border-radius: 0;
+}

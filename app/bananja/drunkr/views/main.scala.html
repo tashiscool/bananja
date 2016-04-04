@@ -1,0 +1,28 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<!-- TODO: needexample to Shim in using jquery -->
+
+<html lang="en">
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("../../../../public/stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("../../../../public/images/favicon.png")">
+        <script>
+            var serverVars = {
+                language: 'en-us',
+                context: 'analytics/v1'
+            }
+        </script>
+        <script src="@routes.Assets.versioned("javascripts/drunkr.js")" type="text/javascript"></script>
+    </head>
+    <body>
+    <noscript>
+        <p>This site requires javascript to run properly. <a href="http://www.enable-javascript.com/">Visit this link</a> for details.</p>
+    </noscript>
+        ALP CONTENT 1
+    <div id="container"></div>
+        ALP CONTENT 2
+    </body>
+</html>

@@ -1,0 +1,42 @@
+/*
+ * Info button (infoBtn.less)
+ * Created: 16 NOV 2015
+ *
+ * Reqs:
+ * Usage sample:
+ * <div class="info-btn">
+ *   <span class="info-btn__trigger">
+ *
+ * CSS dependencies: .popover styles -> should be removed
+ * REACT: InfoBtn.js
+ */
+@import "../../style/imports";
+
+.info-btn {
+    display: inline;
+
+    &__trigger {
+        background-image: url("../img/sprite-info-btn.png");
+        background-position: -8px -51px;
+        cursor: pointer;
+        display: inline-block;
+        height: 16px;
+        margin: 0 0 0 3px;
+        padding-top: 3px;
+        width: 16px;
+
+        &:hover {
+            background-position: -38px -51px;
+        }
+    }
+
+    &__trigger-text {
+        color: @pri-blue;
+        cursor: pointer;
+
+        &:hover {
+            color: @pri-dark-blue;
+            text-decoration: underline;
+        }
+    }
+}

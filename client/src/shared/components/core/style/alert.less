@@ -1,0 +1,53 @@
+/*
+ * Alerts - alert styles (alert.less)
+ * Created: 3 DEC 2015
+ *
+ * Reqs: Alerts for displaying errors, warnings, success messages
+ * Usage sample:
+ * <div class="alert alert--danger alert--dismissable">
+ *   <button class="close">
+ *   <div class="alert__content">
+ *
+ * CSS dependencies: overrides bootstrap alert component
+ * REACT: Alert.js
+ */
+@import "../../style/imports";
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius:0;
+
+    .alert__content {
+        position: relative;
+    }
+
+    &--danger {
+        background-color: @error-lt;
+        border-color: @error;
+        color: @error;
+    }
+
+    &--warning {
+        background-color: @warning-lt;
+        border-color: @warning;
+        color: @warning;
+    }
+
+    &--info {
+        background-color: @info-lt;
+        border-color: @info;
+        color: @info;
+    }
+
+    &--success {
+        background-color: @success-lt;
+        border-color: @success;
+        color: @success;
+    }
+
+    &--dismissable {
+        padding-right: 35px;
+    }
+}

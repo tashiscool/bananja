@@ -1,0 +1,96 @@
+/*
+ * Button Group (btnGroup.less)
+ * Created: 28 JUL 2015
+ * Updated: 07 DEC 2015
+ * Reqs: A collection of buttons grouped together
+ * Usage sample:
+ * <div class="btn-group">
+ * <div class="btn-group__list">
+ *   <div class="btn-group__btn">
+ *     <button class="btn btn--primary">
+ *
+ * Example: Claims, Billing, Register flow
+ *
+ * CSS dependencies: btn
+ *
+ */
+@import "../../style/imports";
+
+.btn-group {
+    display: block;
+
+    &__text {
+        display:       block;
+        margin-bottom: 15px;
+        text-align:    center;
+        width:         100%;
+    }
+
+
+    &--center {
+
+        .btn-group__list {
+
+            .btn-group__btn {
+                .btn { width: 100%; }
+            }
+        }
+
+        @media @tablet-up {
+            float:    left;
+            width:    100%;
+            overflow: hidden;
+            position: relative;
+
+            .btn-group__list {
+                clear:      left;
+                left:       50%;
+                .list-defaults;
+                text-align: center;
+
+                .btn-group__btn {
+                    display: block;
+                    .list-defaults;
+                    right:   50%;
+
+                    .btn {
+                        margin-left: 10px;
+                        width:       auto;
+                    }
+                }
+
+                .btn-group__btn:first-child .btn { margin-left: 0; }
+                .btn-group__btn:only-of-type .btn { margin-right: 0; }
+            }
+        }
+    }
+
+    &--form-footer {
+        border-top:    1px solid #eee;
+        @media @mobile{
+            border-top: none
+        }
+        margin-top:    30px;
+        margin-bottom: 10px;
+        padding:       30px 0 5px 0;
+        .btn-group__btn {
+            .btn {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media @tablet-up {
+            margin-top:    50px;
+            margin-bottom: 10px;
+            padding:       40px 15px 5px 15px;
+
+            .btn-group__btn {
+                .btn {
+                    padding-left:  50px;
+                    padding-right: 50px;
+                    margin:        0 20px 15px;
+                }
+            }
+        }
+    }
+}

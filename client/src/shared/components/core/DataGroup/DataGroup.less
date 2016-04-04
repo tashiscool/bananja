@@ -1,0 +1,49 @@
+/*
+ * Data Group - DataGroup (dataGroup.less)
+ * Created: 08 JAN 2016
+ * 
+ * Reqs: Styling for chunks of data
+ * Usage sample: 
+ * <div class="data-group">
+ *   <h2 class="data-group__title">
+ *   <p class="data-group__item">
+ *
+ * CSS dependencies: none
+ * 
+ */
+
+ @import (reference) "../../style/imports";
+
+.data-group {
+    margin-bottom: 50px;
+
+    &__title {
+        .font-beta;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        margin-bottom: 5px;
+
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    &--sm {
+        display: table;
+        margin-bottom: 10px;
+
+        .data-group__title {
+            margin-bottom: 5px;
+        }
+
+        .data-group__item {
+            margin-bottom: 5px;
+
+            &:last-of-type {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

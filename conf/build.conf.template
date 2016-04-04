@@ -1,0 +1,5 @@
+build{
+    id="${{BUILD_TAG}}"
+    commit="${{BUILD_COMMIT}}"
+    app.version="${{APP_VERSION}}"
+}

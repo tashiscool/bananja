@@ -1,0 +1,29 @@
+/*
+ * Card (card.less)
+ * Created: 11 JAN 2016
+ *
+ * Reqs: Wrapper class for cards. Expands to fill any container.
+ * Usage sample:
+ * <div class="card">
+ *
+ * CSS dependencies: none.
+ * REACT: Card.js
+ */
+@import "../../style/imports";
+
+.card {
+    border: 1px solid #ccc;
+    display: block;
+    padding: 10px;
+    width: 100%;
+
+    &.card--link {
+        padding: 0px;
+
+        a:first-child {
+            display: block;
+            padding:10px;
+            width: 100%;
+        }
+    }
+}

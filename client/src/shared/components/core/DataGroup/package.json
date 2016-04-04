@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "name": "DataGroup",
+  "main": "./DataGroup.js",
+  "version": "0.0.1"
+}

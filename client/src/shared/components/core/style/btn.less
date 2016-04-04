@@ -1,0 +1,262 @@
+/*
+ * Buttons - button styles (btn.less)
+ * Created: 30 JUL 2015
+ *
+ * Reqs: Anchor or button elements styled as btns. Split into colors and sizes for convenience.
+ * Usage sample:
+ * <a class="btn btn--primary btn--lg" href="/path">
+ * <button class="btn btn--secondary btn--lg" >
+ *
+ * CSS dependencies: overrides bootstrap btn component
+ * REACT: Btn.js, BtnPrimary.js, BtnSecondary.js, etc.
+ */
+@import "../../style/imports";
+
+.btn-disabled-style() {
+    background-color: #F5F5F5;
+    border-color:     #D2D2D2;
+    cursor:           default;
+    color:            #A4A4A4;
+
+    &:hover, &:active {
+        background-color: #F5F5F5;
+        border-color:     #D2D2D2;
+        cursor:           default;
+        color:            #A4A4A4;
+    }
+    &:focus {
+        outline-color: #D2D2D2;
+    }
+}
+
+button {
+    border:  none;
+    outline: none;
+}
+
+.btn-size-default() {
+    height:      48px;
+    line-height: 46px;
+    padding:     0 30px;
+}
+
+.btn, a.btn {
+    /*global btn defaults*/
+    border:             1px solid transparent;
+    border-radius:      4px;
+    .btn-size-default;
+    color:              #333;
+    .ellipsis;
+    .font-prime;
+    font-weight:        400;
+    margin-bottom:      10px;
+    outline:            none;
+    text-align:         center;
+    -webkit-transition: all .3s ease;
+    transition:         all .3s ease;
+
+    @media @mobile {
+        padding: 0 15px;
+    }
+
+    &.disabled,
+    &[disabled],
+    &.disabled:hover,
+    &[disabled]:hover,
+    &.disabled:focus,
+    &[disabled]:focus,
+    &.disabled:active,
+    &[disabled]:active,
+    &.disabled.active,
+    &[disabled].active {
+        .btn-disabled-style;
+    }
+
+    &:focus {
+        outline: 5px auto;
+    }
+
+    &:active {
+        background-image: none;
+        .box-shadow-inset(0, 3px, 5px, 0, rgba(0, 0, 0, .125));
+        outline:          0;
+    }
+
+    /*utils*/
+    &.btn--block {
+        display: block;
+        width:   100%;
+    }
+
+    /*sizes*/
+    &.btn--lg {
+        height:      55px;
+        line-height: 53px;
+        padding:     0 25px;
+    }
+
+    &.btn--md { /*default btn size*/
+        .btn-size-default;
+    }
+
+    &.btn--sm {
+        .font-deci;
+        height:      35px;
+        line-height: 33px;
+        padding:     0 35px;
+
+        &.btn--sm-narrow {
+            padding: 0 20px;
+        }
+    }
+
+    /*colors*/
+    &.btn--primary {
+        background-color: @a-green;
+        color:            #fff;
+
+        &:hover, &:active {
+            background-color: @a-green-dark;
+            color:            #fff;
+        }
+        &:focus {
+            outline-color: @a-green-mid;
+        }
+    }
+
+    &.btn--primary-outline {
+        background-color: transparent;
+        border-color:     @a-green;
+        color:            @a-green;
+
+        &:hover, &:active {
+            background-color: transparent;
+            border-color:     @a-green;
+            color:           @a-green;
+        }
+        &:focus {
+            outline-color: @a-green-mid;
+        }
+    }
+
+    &.btn--secondary {
+        background-color: #666;
+        color:            #fff;
+
+        &:hover, &:active {
+            background-color: #555;
+            color:            #fff;
+        }
+        &:focus {
+            outline-color: #555;
+        }
+    }
+
+    &.btn--secondary-outline {
+        background-color: transparent;
+        border-color:     #CCC;
+        color:            #CCC;
+
+        &:hover, &:active {
+            background-color: #F4F4F4;
+            border-color:     #AAA;
+            color:            #AAA;
+        }
+        &:focus {
+            outline-color: #555;
+        }
+    }
+
+    &.btn--tertiary {
+        background-color: @a-orange;
+        color:            #fff;
+
+        &:hover, &:active {
+            background-color: @a-orange-dark;
+            color:            #fff;
+        }
+        &:focus {
+            outline-color: #ff9111;
+        }
+    }
+
+    &.btn--tertiary-outline {
+        border-color:     @a-orange;
+        background-color: transparent;
+        color:            @a-orange;
+
+        &:hover, &:active {
+            border-color: @a-orange-dark;
+            color:        @a-orange-dark;
+        }
+        &:focus {
+            outline-color: #ff9111;
+        }
+    }
+
+    &.btn--opacity {
+        border-color:     #444;
+        background-color: rgba(0, 0, 0, 0.45);
+        color:            #fff;
+
+        &:hover, &:active {
+            background-color: rgba(0, 0, 0, 0.55);
+            color:            #fff;
+        }
+    }
+
+    &.btn--opacity-light {
+        border-color:     #454545;
+        background-color: rgba(68, 68, 68, 0.45);
+        color:            #fff;
+
+        &:hover, &:active {
+            background-color: rgba(55, 55, 55, 0.45);
+            color:            #fff;
+        }
+    }
+
+    &.btn--link-outline {
+        background-color: transparent;
+        border-color:     @a-blue;
+        color:            @a-blue;
+
+        &:hover, &:active {
+            color: @a-blue;
+        }
+    }
+
+    &.btn--disabled {
+        .btn-disabled-style;
+    }
+}
+
+/* social buttons */
+.btn-facebook, .btn-twitter, .btn-googleplus {
+    border-width: 0;
+    color:        #fff !important;
+    text-align:   left;
+    .font-delta;
+    padding:      15px;
+    word-wrap:    normal;
+    .ellipsis;
+}
+
+a.btn-facebook, a.btn-twitter, a.btn-googleplus {
+    color:           white;
+    text-decoration: none;
+    width:           100%;
+    padding-left:    70px !important;
+}
+
+.btn-facebook {
+    background: #3d5b96 url(/assets/images/css-images/facebook-button-logo.png) no-repeat;
+}
+
+.btn-twitter {
+    background: #1fb6f2 url(/assets/images/css-images/twitter-button-logo.png) no-repeat;
+}
+
+.btn-googleplus {
+    background: #db4c3f url(/assets/images/css-images/googleplus-button-logo.png) no-repeat;
+}

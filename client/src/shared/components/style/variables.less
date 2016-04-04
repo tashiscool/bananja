@@ -1,0 +1,167 @@
+@import "mixins";
+
+@basecolor1: #1567c5;
+@basecolor2: #0e56a3;
+@basecolor3: lighten(@basecolor1, 10%);
+@basecolor4: lighten(@basecolor2, 10%);
+@basecolor5: darken(@basecolor1, 10%);
+@basecolor6: darken(@basecolor2, 10%);
+
+@pri-dark-blue: rgb(0, 75, 141);
+// primary light blue
+@pri-blue: rgb(19, 181, 234);
+@placeholder-color: red;
+
+// Colours
+//-----------------------------------
+@a-yellow: #E0BD0E;
+@a-blue2: #0f87b0;
+@a-blue: #51B5E0;
+@a-blue-trans: rgba(81, 181, 224, .90);
+@a-green: #7FBA00;
+@a-green-mid: #6EA100;
+@a-green-dark: #6EA900;
+@a-orange: #FF9111;
+@a-orange-dark: #E77C00;
+@black: #000;
+@error: #df0000;
+@error-lt: #f5cfce;
+@warning: #C68832;
+@warning-lt: #fcf8e3;
+@success: #7fba00;
+@success-lt: #effad6;
+@info: #31708f;
+@info-lt: #d9edf7;
+@white: #FFF;
+
+@grey1: #333;
+// Main color for all grey fonts, bottom of grey buttons, labels
+//old grey1 new UI kit favors #333 - @grey1: #999;
+@grey2: #A4A4A4;
+@grey4: #F5F5F5;
+// sidebar, etc
+@grey5: #656565;
+// secondary buttons
+@grey6: #D2D2D2;
+// need to leave for secondary buttons, panels on product details
+@grey7: #DCDCDC;
+// bottom border
+@grey9: #4f4f4e;
+// leave
+@grey10: #ddd;
+// progress tracker to do color
+@grey11: #666;
+// hint text
+@grey12: #999;
+// tracker to-do text
+@grey13: #959595;
+// account settings headers
+
+@body-color: #555;
+
+// SIMPLR
+@lightBlue: #13b5ea;
+@secondary-light-blue: #eef8fc;
+@simplr-border-bottom: none;
+@simplr-border-color: none;
+@simplr-border-radius: 5px;
+@simplr-btn-primary: #349aca;
+@simplr-btn-secondary: #656565;
+@simplr-color: #349aca;
+@simplr-font-body: arial, sans-serif;
+@simplr-font-bold: 'lunchbox_slabbold', serif;
+@simplr-font: 'lunchbox_slablight', serif;
+
+// client colors
+@amazonwatch: #F90;
+@amazonwatch-black: #232F3E;
+@amazonwatch-grey-dark: #696969;
+@excellenceplus: #d2d2d2;
+@excellenceplus-dark: #A7A7A9;
+@officedepot: #CB2440;
+@officedepot-dark: #AB2238;
+@target: #B50000;
+@target-dark: #900;
+@target-grey-dark: #454545;
+@thehomedepot: #F68427;
+@thehomedepot-grey-dark: #696969;
+@walmart: #1460AB;
+@walmart2: #1A75CF;
+@walmartca: #3B709E;
+@walmart-gold: #FDBB30;
+@walmart-blue-bright: #3396E3;
+@aafes: #104b7d;
+@aafes-red: #C3132B;
+@aafes-navy: #0E497B;
+@nex: #303393;
+@nex-gold: #FAB400;
+@nex-navy: #313592;
+@mcx: #133880;
+@mcx-red: #F63122;
+@mcx-navy: #002875;
+@cgx: #0078ae;
+@cgx-orange: #F15E20;
+@cgx-teal: #0077AD;
+@vcs: #1c3f95;
+@vcs-red: #E20B2C;
+@vcs-navy: #1D4093;
+@dtv-blue: #3296E6;
+@dtv-navy: #064C8E;
+
+// HUB Hello User
+@hello-user-border: #ddd;
+@hello-user-background: @grey4;
+
+// Media queries
+//---------------------------------------
+@mobile: ~'screen and (max-width: 767px)';
+@tablet: ~'screen and (min-width: 768px) and (max-width: 990px)';
+@desktop: ~'screen and (min-width: 991px)';
+@tablet-min: ~'screen and (min-width: 768px)';
+
+@mobile-up: ~'screen and (min-width: 320px)';
+@tablet-up: ~'screen and (min-width: 768px)';
+@tablet-down: ~'screen and (max-width: 990px)';
+
+// badge colors
+@badge-success: #3f5d00;
+@badge-alert: #C68832;
+@badge-error: #df0000;
+
+// Z-INDEX CATALOG
+
+@z-select-select: 0;
+@z-split-half: 0;
+@z-status-flag-before: 1;
+@z-is-collapsed: 1;
+@z-content-row: 1;
+@z-claimTracker: 1;
+@z-simplr-button-over: 1;
+@z-social-login-btn-block-after: 1;
+@z-hub-nav: 1;
+@z-form-control-focus: 2;
+@z-ocr-receipt-img: 2;
+@z-simplr-bluelines: 2;
+@z-outcome: 9;
+@z-glyphicons-ok-2: 9;
+@z-glyphicons-remove-2: 9;
+@z-select: 10;
+@z-keep-on-top: 99;
+@z-hero: 100;
+@z-main-content: 100;
+@z-landing-hero: 100;
+@z-mobileSlideOut: 200;
+@z-progress-flag: 999;
+@z-contextual-help-bubble: 1000;
+@z-contextual-help-arrow: 1001;
+@z-coachMask: 1001;
+@z-navbar-nav: 1001;
+@z-coachContent: 1002;
+@z-modal-backdrop-in: 1020;
+@z-close-modal: 1050;
+@z-progress-overlay: 1080;
+@z-progress-content: 2000;
+
+@z-index-datepicker: 5;
+
+@ZZ-TOP: 1000000;

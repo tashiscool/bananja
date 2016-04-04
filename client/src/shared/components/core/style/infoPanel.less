@@ -1,0 +1,48 @@
+/*
+ * Info panel (infoPanel.less)
+ * Created: 10 SEP 2015
+ *
+ * Reqs:
+ * Usage sample:
+ * <div class="info-panel">
+ *   <div class="info-panel__header">
+ *   <div class="info-panel__body">
+ *   <div class="info-panel__footer">
+ *
+ * CSS dependencies: none
+ * REACT: InfoPanel.js
+ */
+@import "../../style/imports";
+
+@info-panel-padding: 15px;
+
+.info-panel {
+    background-color: #fff;
+    .hub-border-wrap();
+    margin-bottom:    20px;
+
+    &__header {
+        background:    @grey4;
+        border-bottom: 1px solid @grey6;
+        padding:       10px @info-panel-padding;
+    }
+
+    &__title {
+        color:  @grey1;
+        .font-prime();
+        margin: 0;
+
+        &-actions {
+            float: right;
+            a { margin-left: 10px; }
+        }
+    }
+
+    &__body {
+        padding: @info-panel-padding;
+    }
+
+    &__footer {
+        padding: 10px @info-panel-padding;
+    }
+}

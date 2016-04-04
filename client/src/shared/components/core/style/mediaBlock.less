@@ -1,0 +1,38 @@
+/*
+ * Media Block (media-block.less)
+ * Created: 18 DEC 2015
+ * 
+ * Reqs: Simplified media block element - more flexible and extendable than bootstrap
+ * Usage sample: 
+ * <div class="media-block">
+ *   <div class="media-block__img">
+ *   <div class="media-block__bdy">
+ *
+ * CSS dependencies: none
+ * 
+ */
+
+ @import (reference) "../../style/imports";
+
+.media-block {
+    margin-bottom: 15px;
+    overflow:      hidden; _overflow: visible;
+    zoom:          1;
+
+    .media-block__img {
+        display:      block;
+        float:        left;
+        margin-right: 10px;
+        img { display: block; }
+
+        &--imgRight {
+            float:       right;
+            margin-left: 10px;
+        }
+    }
+
+    .media-block__bdy {
+        overflow: hidden; _overflow: visible;
+        zoom:     1;
+    }
+}

@@ -1,0 +1,100 @@
+/*
+ * Datepicker - datepicker style overrides: react-date-picker/base.css (DatePicker.less)
+ * Created: 05 FEB 2016
+ *
+ * Reqs: InputText Datepicker wrapper for npm react-date-picker
+ * Usage sample:
+ * <div class="datepicker-wrapper">
+ *   <input/>
+ *   <DatePicker plugin/>
+ *
+ * CSS dependencies: react-date-picker/base.css
+ * REACT: InputDatePicker.js
+ */
+@import "../../style/imports";
+
+.datepicker-wrapper {
+    position: relative;
+
+    .datepicker-popup {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 50px;
+        padding: 5px;
+        position: absolute;
+        width: 100%;
+        z-index: @z-index-datepicker;
+
+
+        .dp-cell {
+            border-radius: 3px;
+            color: #666;
+            min-height: 35px;
+            padding: 5px;
+
+            &.dp-nav-view, &.dp-prev-nav, &.dp-next-nav {
+                color: #000;
+                cursor: pointer;
+                font-weight: bold;
+                padding: 5px;
+            }
+
+            &.dp-nav-view {
+                .font-epsilon;
+            }
+
+            &.dp-week-day-name { font-size: 11px; }
+
+            &.dp-day {
+                cursor: pointer;
+
+                &.dp-value, &.dp-current.dp-value {
+                    background-color: #333;
+                    color: #fff;
+                    &:hover {
+                        background-color: #333;
+                    }
+                }
+                &:hover {
+                    background-color: #ddd;
+                    transition: background-color .5s ease;
+                }
+
+                &.dp-prev, &.dp-next, &.dp-current {
+                    background-color: #f7f7f7;
+                }
+
+                &.dp-disabled {
+                    color: #ccc;
+
+                    &:hover {
+                        background: transparent;
+                        cursor: default;
+                    }
+                }
+            }
+
+            &.dp-month {
+                font-size: 11px;
+            }
+        }
+
+        @media @tablet-up {
+            padding: 10px 15px;
+
+            .dp-cell {
+                padding: 10px;
+
+                &.dp-week-day-name {
+                    .font-epsilon;
+                }
+
+                &.dp-month {
+                    .font-epsilon;
+                }
+            }
+        }
+    }
+
+}
