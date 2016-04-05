@@ -1,5 +1,6 @@
 package bananja.drunkr.models
 
+import commons.model.{ModelMapper, ModelLike}
 import play.api.Logger
 import play.api.libs.json.{JsString, JsValue}
 

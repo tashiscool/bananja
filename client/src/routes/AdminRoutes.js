@@ -2,7 +2,7 @@ var R = require('react-router');
 
 module.exports = () => (
     <R.Route path={ ctx('/admin') } onEnter={redirectToSignin}>
-        <R.Route path={ 'dashboard' } component={require('components/page/ReportDashboard')}/>
+        <R.Route path={ 'dashboard' } component={require('components/page/SignIn')}/>
     </R.Route>
 );
 

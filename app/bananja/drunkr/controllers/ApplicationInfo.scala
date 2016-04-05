@@ -1,5 +1,6 @@
 package bananja.drunkr.controllers
 
+import reactivemongo.api.DefaultDB
 import slick.backend.DatabaseConfig
 import slick.driver.JdbcProfile
 
@@ -14,7 +15,7 @@ case class EnvironmentInfo(appVersion: String, build: BuildInfo)
 case class BuildInfo(id: String, commitHash: String)
 
 
-class ApplicationInfo(dbConfig: DatabaseConfig[JdbcProfile]) extends Controller with LazyLogging{
+class ApplicationInfo() extends Controller with LazyLogging{
 
   def index = Action {
       Ok(bananja.drunkr.views.html.index("Your new application is ready."))

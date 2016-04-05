@@ -1,7 +1,5 @@
 package bananja.drunkr.controllers
 
-import com.bananja.reporting.commons.mvc.{RequestWithContext, Authenticated}
-import bananja.drunkr.models.{ServiceUser, User, XY, GradeXY}
 import bananja.drunkr.modules.FakeApplicationTrait
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner

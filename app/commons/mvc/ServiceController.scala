@@ -6,6 +6,8 @@ import play.api.Application
 import play.api.i18n.Lang
 import play.api.mvc._
 
+import commons.model.Enum
+
 
 
 
@@ -56,10 +58,28 @@ trait ContextBuilder[U <: UserLike] {
 
 trait UserLike {
   def id: String
-  def hasRole(role: UserRole): Boolean
+  def hasRole(role: UserRole.EnumVal): Boolean
 }
 
-trait UserRole
+
+object UserRole extends Enum {
+
+  val admin = new EnumVal {val name = "admin"}
+  val bartender = new EnumVal {val name = "bartender"}
+  val drunkr = new EnumVal {val name = "drunkr"}
+
+  sealed trait EnumVal extends Value with Serializable
+
+  def fromString(string: String):UserRole.EnumVal={
+    string match {
+      case "admin" => admin
+      case "bartender" => bartender
+      case "drunkr" => drunkr
+      case _ => drunkr
+    }
+  }
+
+}
 
 object ControllerImplicits {
 

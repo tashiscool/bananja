@@ -1,10 +1,15 @@
 package bananja.drunkr.modules
 
+
+import bananja.drunkr.models.dao.models.dao.sapi.{UserDaoReactive, UserDaoReactiveImpl}
+import reactivemongo.api.{MongoDriver, MongoConnection, DefaultDB}
+
+import com.typesafe.config.ConfigFactory
+
 import java.net.URI
-import com.bananja.reporting.commons.cache.{DB, DBClient}
-import com.bananja.reporting.commons.ws.soap.StatsdSoapHttpCall
-import controllers.{ServiceContextBuilder}
-import bananja.drunkr.models.dao.{StudentGradeDaoImpl, StudentGradeDao}
+import commons.cache.{DB, DBClient}
+import commons.ws.soap.StatsdSoapHttpCall
+import bananja.drunkr.models.dao.{UserDaoImpl, UserDao}
 import bananja.drunkr.services._
 import play.api.{BuiltInComponents, Play}
 import play.api.libs.ws.WS
@@ -23,7 +28,8 @@ import slick.backend.DatabaseConfig
 import slick.driver.JdbcProfile
 import play.api.db.slick.{DbName, SlickComponents}
 
-
+import scala.concurrent.Future
+import scala.util.Success
 
 
 //trait ControllerModule extends ServiceModule with DaoModules with DatabaseModule   {
@@ -31,8 +37,6 @@ trait ControllerModule {
 
   import com.softwaremill.macwire._
   //service dependencies
-  def dbConfig: DatabaseConfig[JdbcProfile]
-
   implicit def ctxBuilder:ServiceContextBuilder
 
   //controllers
@@ -53,7 +57,6 @@ trait ServiceModule {
 
   import com.softwaremill.macwire._
   //dependencies
-  def studentGradeDao: StudentGradeDao
 
   lazy val underlyingHttpCall = new StatsdSoapHttpCall(Statsd)
   lazy val wsClient = WS.client
@@ -67,12 +70,34 @@ trait ServiceModule {
 //trait DaoModules extends DatabaseModule{
 trait DaoModules{
   import com.softwaremill.macwire._
-  def dbConfig: DatabaseConfig[JdbcProfile]
-  lazy val studentGradeDao: StudentGradeDao = wire[StudentGradeDaoImpl]
+//  def dbConfig: DatabaseConfig[JdbcProfile]
+//  lazy val UserDao: UserDao = wire[UserDaoImpl]
+
+  def db: Future[DefaultDB]
+  lazy val userDao: UserDaoReactive = wire[UserDaoReactiveImpl]
 }
 
 trait DatabaseModule extends SlickComponents {
 
+//  import com.softwaremill.macwire._
+//  lazy val dbConfig = api.dbConfig[JdbcProfile](DbName("default"))
+
   import com.softwaremill.macwire._
-  lazy val dbConfig = api.dbConfig[JdbcProfile](DbName("default"))
+
+  lazy val config = ConfigFactory.load
+
+  lazy val driver = new MongoDriver
+
+  lazy val db: Future[DefaultDB] = {
+    import scala.concurrent.ExecutionContext.Implicits.global
+
+    val parsedUri = MongoConnection.parseURI(config getString "mongodb.uri")
+    parsedUri match {
+      case Success(uri)=>{
+        val con = driver.connection(uri)
+        con.database(uri.db.get)
+      }
+      case _ => throw new RuntimeException(s"Could not parse URI '${config getString "mongodb.uri"}'")
+    }
+  }
 }

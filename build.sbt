@@ -24,6 +24,7 @@ lazy val logbackClassicLoggingVersion = "1.1.3"
 lazy val scalaGuiceVersion = "4.0.1"
 lazy val scalaLoggingVersion = "3.1.0"
 lazy val scalaTestPlusVersion = "1.4.0"
+lazy val playVersion = "2.4.6"
 
 buildInfoKeys := Seq[BuildInfoKey](
   name,
@@ -180,7 +181,20 @@ libraryDependencies ++= Seq(
   "org.specs2"                %%  "specs2-core"                 % "2.4.17"            % "test",
   "org.specs2"                %%  "specs2-junit"                % "2.4.17"            % "test",
   "org.postgresql"            %  "postgresql"                  % "9.4-1201-jdbc41",
-  "com.typesafe.slick"        %%  "slick"                       % "3.1.1"
+  "com.typesafe.slick"        %%  "slick"                       % "3.1.1",
+  "com.typesafe.play"         %%  "play"                      % playVersion,
+  "com.typesafe.play"         %%  "play-ws"                   % playVersion,
+  "com.typesafe.play"         %%  "play-test"                 % playVersion,
+  "net.spy"                   %   "spymemcached"              % "2.11.4",
+  "com.typesafe.play.plugins" %%  "play-statsd"               % "2.3.0",
+  "org.scalamock"             %%  "scalamock-specs2-support"  % "3.2.1" % "test",
+  "com.github.tminglei"       %% "slick-pg"                   % "0.12.1",
+  "com.github.etaty"          %% "rediscala"                  % "1.6.0",
+  "com.github.nscala-time" %% "nscala-time" % "1.8.0",
+  "org.reactivemongo" %% "play2-reactivemongo" % "0.11.0.play24" exclude("org.scala-stm", "scala-stm_2.10.0"),
+  "org.reactivemongo" %% "reactivemongo" % "0.11.11",
+  "org.springframework.data" % "spring-data-mongodb" % "1.3.1.RELEASE" exclude("org.scala-stm", "scala-stm_2.10.0"),
+  "org.codehaus.jackson" % "jackson-mapper-lgpl" % "1.9.13"
 
 )
 

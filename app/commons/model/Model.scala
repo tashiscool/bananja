@@ -8,7 +8,7 @@ import play.api.libs.json._
 import play.api.libs.json.Json._
 
 
-import com.drunkr.reporting.commons.cache.CacheAPI
+import commons.cache.CacheAPI
 
 object Implicits {
 

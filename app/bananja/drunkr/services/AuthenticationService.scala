@@ -1,6 +1,8 @@
 package bananja.drunkr.services
 
+import commons.mvc.{AuthenticationHelper, AuthenticationState}
 import play.api.mvc.RequestHeader
+import play.api.Play.current
 
 /**
   * Created by tkhan

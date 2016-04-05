@@ -1,13 +1,15 @@
 package commons.mvc
 
+import commons.model.ModelMapper
+
 import scala.concurrent.Future
 import scala.annotation.meta.param
 import play.api.libs.json._
 import play.api.mvc.Result
 import play.api.mvc.Results.{Status, _}
 
-import com.drunkr.reporting.commons.model.Implicits._
-import com.drunkr.reporting.commons.model.{ModelLike, ModelMapper}
+import commons.model.Implicits._
+import commons.model.{ModelLike, ModelMapper}
 
 
 
@@ -57,6 +59,7 @@ abstract class CommandWithKeyData(val command: String) extends CommandResponse {
   object CommandResponse {
       /**
        * takes multiple Response objects transforms them into a JsArray and creates a Result
+ *
        * @param responses
        * @return a Result
        */
@@ -64,6 +67,7 @@ abstract class CommandWithKeyData(val command: String) extends CommandResponse {
 
       /**
        * wraps a response call in a Future.successful
+ *
        * @param responses
        * @return a Future[Result]
        */

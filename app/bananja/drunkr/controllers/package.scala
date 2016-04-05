@@ -3,9 +3,10 @@ package bananja.drunkr
 import bananja.drunkr.models.{SimpleData, User}
 import bananja.drunkr.services.{AuthenticationService, UserService}
 
+import commons.mvc._
 import play.api.i18n.Lang
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
-import play.api.mvc.{AnyContent, Request, RequestHeader, Result, Results}
+import play.api.mvc._
 import play.api.{Application => PlayApp, Logger}
 
 import scala.concurrent.Future

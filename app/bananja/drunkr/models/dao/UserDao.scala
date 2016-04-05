@@ -1,6 +1,6 @@
 package bananja.drunkr.models.dao
 
-import bananja.drunkr.models.User
+import bananja.drunkr.models.{UserTable, User}
 import slick.backend.DatabaseConfig
 import slick.driver.H2Driver.api._
 import slick.driver.JdbcProfile

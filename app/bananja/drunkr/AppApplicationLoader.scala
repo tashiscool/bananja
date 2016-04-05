@@ -2,6 +2,7 @@ package bananja.drunkr
 
 import _root_.controllers.Assets
 import bananja.drunkr.models.dao.UserDao
+import bananja.drunkr.models.dao.models.dao.sapi.UserDaoReactive
 import bananja.drunkr.modules._
 import slick.backend.DatabaseConfig
 import slick.driver.JdbcProfile
@@ -12,6 +13,7 @@ import play.api.routing.Router
 import play.api.{Logger, _}
 
 import scala.concurrent.ExecutionContext
+import router.Routes
 
 
 class AppApplicationLoader extends ApplicationLoader {
@@ -40,19 +42,9 @@ import scala.concurrent.Await
 import scala.concurrent.duration._
 import scala.language.postfixOps
 class Seed(
-            val dbConfig: DatabaseConfig[JdbcProfile],
-            val userDao: UserDao
+            val userDao: UserDaoReactive
           ) {
-  import dbConfig.driver.api._
-  val db = dbConfig.db
 
   def run(): Unit = {
-    val setup = DBIO.seq(
-      // Create the tables
-      sqlu"DROP ALL OBJECTS",
-      (studentGradeDao.query.schema).create
-    )
-
-    Await.result(db.run(setup), 30 seconds)
   }
 }
