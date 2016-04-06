@@ -19,6 +19,9 @@ window.UserService =  module.exports = {
     authenticate(username, password) {
         return CommunicationService.post({svc: 'auth', action: 'signin', data: {username: username, password: password}});
     },
+    authenticate(username, password, phone) {
+        return CommunicationService.post({svc: 'auth', action: 'signin', data: {username: username, password: password, phone: phone}});
+    },
 
     signInComplete() {
         var user = RS.get('user');

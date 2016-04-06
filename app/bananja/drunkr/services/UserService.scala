@@ -1,5 +1,7 @@
 package bananja.drunkr.services
 
+import bananja.drunkr.models.dao.models.dao.sapi.UserDaoReactive
+
 import commons.mvc.{AuthenticationHelper, AuthenticationState}
 import bananja.drunkr.models.User
 import commons.mvc.UserRole
@@ -13,7 +15,7 @@ import play.api.Play.current
 trait UserService {
   def getUser(id: String): Future[Option[User]]
 }
-class UserServiceImpl extends UserService{
-  def getUser(id: String): Future[Option[User]] = Future.successful(Some(User("","",UserRole.admin)))
+class UserServiceImpl(userDaoReactive: UserDaoReactive) extends UserService{
+  def getUser(id: String): Future[Option[User]] = userDaoReactive.getUserById(id)
 
 }

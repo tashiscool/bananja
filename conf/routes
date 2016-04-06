@@ -10,4 +10,5 @@ GET        /            bananja.drunkr.controllers.ApplicationInfo.index
 GET        /ping        bananja.drunkr.controllers.ApplicationInfo.ping
 GET        /info        bananja.drunkr.controllers.ApplicationInfo.info
 
-POST       /:lang/auth/signin            bananja.drunkr.controllers.UserApi.login(lang)
+POST       /drunkr/:lang/auth/signin            bananja.drunkr.controllers.UserApi.login(lang)
+POST       /drunkr/:lang/auth/signup            bananja.drunkr.controllers.UserApi.signup(lang)

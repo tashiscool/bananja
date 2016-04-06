@@ -57,6 +57,7 @@ trait ServiceModule {
 
   import com.softwaremill.macwire._
   //dependencies
+  def userDao: UserDaoReactive
 
   lazy val underlyingHttpCall = new StatsdSoapHttpCall(Statsd)
   lazy val wsClient = WS.client
@@ -71,7 +72,6 @@ trait ServiceModule {
 trait DaoModules{
   import com.softwaremill.macwire._
 //  def dbConfig: DatabaseConfig[JdbcProfile]
-//  lazy val UserDao: UserDao = wire[UserDaoImpl]
 
   def db: Future[DefaultDB]
   lazy val userDao: UserDaoReactive = wire[UserDaoReactiveImpl]
