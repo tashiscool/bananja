@@ -14,8 +14,9 @@ import play.api.Play.current
   */
 trait UserService {
   def getUser(id: String): Future[Option[User]]
+  def createUser(user: User): Future[Boolean]
 }
 class UserServiceImpl(userDaoReactive: UserDaoReactive) extends UserService{
   def getUser(id: String): Future[Option[User]] = userDaoReactive.getUserById(id)
-
+  def createUser(user: User): Future[Boolean] = userDaoReactive.createUser(user).map(_.ok)
 }
