@@ -19,7 +19,7 @@ module.exports = class SignIn extends PureRenderComponent {
     }
 
     render() {
-        var regex = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+
         return (
             <div>
                 { _.size(this.state.alertBar) > 0  &&
@@ -27,7 +27,7 @@ module.exports = class SignIn extends PureRenderComponent {
                        onClose={ () => {RS.set('signin.alertBar', [])} }>{this.state.alertBar}</Alert> }
                     <Form ref="signInForm" rsKey="signin-form">
                         <Form.InputText name="phone" label={gt.gettext("Email Address")}
-                                        customValidator={value => regex.test(value) ? '' : 'Please enter a valid email address'}/>
+                                        customValidator={value => /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i.test(value) ? '' : 'Please enter a valid email address'}/>
                         <Form.InputText name="password" label={gt.gettext("Password")}
                                         type="password"
                                         customValidator={value => /(?=.*[0-9])(?=.*[a-zA-Z])(.+){7,}/i.test(value) ? '' : 'Please enter a valid password'}

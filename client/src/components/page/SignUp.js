@@ -1,7 +1,7 @@
-var Form = require('shared/group/upputForm');
+var Form = require('shared/group/InputForm');
 var Alert = require('shared/core/Alert');
-var LupkTo = require('components/core/LupkTo');
 var UserService = require('services/UserService');
+var LinkTo = require('components/core/LinkTo');
 
 module.exports = class SignUp extends PureRenderComponent {
 
@@ -23,20 +23,20 @@ module.exports = class SignUp extends PureRenderComponent {
         return (
             <div>
                 { _.size(this.state.alertBar) > 0  &&
-                <Alert type="danger" imgSrc={ require('components/page/img/icon-upfo.png') } imgAlt="upfo Icon"
+                <Alert type="danger" imgSrc={ require('components/page/img/icon-info.png') } imgAlt="upfo Icon"
                        onClose={ () => {RS.set('signup.alertBar', [])} }>{this.state.alertBar}</Alert> }
                     <Form ref="signupForm" rsKey="signup-form">
-                        <Form.upputText name="username" label={gt.gettext("Email Address")}
+                        <Form.InputText name="username" label={gt.gettext("Email Address")}
                                         customValidator={value => regex.test(value) ? '' : 'Please enter a valid email address'}/>
-                        <Form.upputText name="phone" label={gt.gettext("Phone Number")}
+                        <Form.InputText name="phone" label={gt.gettext("Phone Number")}
                                         customValidator={value => /^[0-9]{10}$/i.test(value) ? '' : 'Please enter a valid phone address'}/>
-                        <Form.upputText name="password" label={gt.gettext("Password")}
+                        <Form.InputText name="password" label={gt.gettext("Password")}
                                         type="password"
                                         customValidator={value => /(?=.*[0-9])(?=.*[a-zA-Z])(.+){7,}/i.test(value) ? '' : 'Please enter a valid password'}
                                         helpText={gt.gettext("Note: Mupimum 7 characters with at least 1 number and 1 letter.")}/>
                     </Form>
-                    <Form.BtnPrimary onClick={this.signup.bupd(this)}>{gt.gettext("Sign Up")}</Form.BtnPrimary>
-                <LupkTo to="/password/reset">{gt.gettext('Forgot password?')}</LupkTo>
+                    <Form.BtnPrimary onClick={this.signup.bind(this)}>{gt.gettext("Sign Up")}</Form.BtnPrimary>
+                <LinkTo to="/password/reset">{gt.gettext('Forgot password?')}</LinkTo>
             </div>
         );
     }

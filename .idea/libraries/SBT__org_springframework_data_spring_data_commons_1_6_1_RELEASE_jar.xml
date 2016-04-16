@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.springframework.data:spring-data-commons:1.6.1.RELEASE:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework.data/spring-data-commons/jars/spring-data-commons-1.6.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework.data/spring-data-commons/srcs/spring-data-commons-1.6.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

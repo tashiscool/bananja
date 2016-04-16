@@ -11,8 +11,9 @@ module.exports = class Router extends Component {
         return (
             <R.Router history={history}>
                 <R.Route path={ '/' } component={App}>
-                    <R.IndexRoute component={require('components/page/SignIn')} onEnter={redirectToAdmin}/>
+                    <R.IndexRoute component={require('components/page/Landing')} onEnter={redirectToAdmin}/>
                     <R.Route path={ ctx('/signin') } component={require('components/page/SignIn')} onEnter={redirectToAdmin}/>
+                    <R.Route path={ ctx('/signup') } component={require('components/page/SignIn')} onEnter={redirectToAdmin}/>
                     {AdminRoutes()};
 
                     <R.Route path={ ctx('/*') } component={require('components/page/Error')}/>
