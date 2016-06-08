@@ -38,6 +38,7 @@ trait ControllerModule {
   import com.softwaremill.macwire._
   //service dependencies
   implicit def ctxBuilder:ServiceContextBuilder
+  def userService: UserService
 
   //controllers
   lazy val applicationController = wire[ApplicationInfo]

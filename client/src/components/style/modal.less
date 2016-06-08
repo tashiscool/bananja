@@ -1,0 +1,51 @@
+@import (reference) "imports.less";
+.modal .modal-dialog {
+
+  @media @tablet-up {
+    width: 460px;
+    margin-top: 130px;
+  }
+
+  .modal-header { border: 0; }
+
+  .modal-content{
+    position: absolute;
+    text-align: center;
+    .modal-header {
+      padding: 50px 65px 0px;
+
+      .close {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+
+        span { font-size: 40px;}
+      }
+      h4 {
+        .font-beta;
+        font-weight: 400;
+      }
+    }
+
+
+    .modal-body { padding: 30px 15px 20px; }
+    .modal-footer {
+      border: 0;
+      padding-bottom: 30px;
+
+      .btn {
+        width: 190px;
+        line-height: 20px;
+        white-space: normal;
+
+        &.btn--lg {
+          height: auto;
+          padding: 15px 20px;
+        }
+      }
+    }
+  }
+
+}
+
+

@@ -1,0 +1,126 @@
+/*
+ * Retailer Header - Header (header.less)
+ * Created: 11 DEC 2015
+ *
+ * Reqs: Header for retailer portal
+ *
+ * Author: Clayton Huthwaite <Clayton.Huthwaite@asurion.com>
+ * CSS dependencies: Bootstrap is used to reveal mobile nav button
+ *
+ */
+
+@import (reference) "../../style/imports";
+@menuGray: #7c878e;
+@menuPadding: 25px;
+
+.menuBars {
+    background-color: @menuGray;
+    content: "";
+    display: block;
+    height: 4px;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 4px solid @menuGray;
+    padding: @menuPadding 0;
+
+    &__menu {
+
+        &-toggle {
+            background: transparent;
+            border: 2px solid @menuGray;
+            height: 40px;
+            width: 40px;
+        }
+
+        &-bar {
+            .menuBars;
+            margin-top: 4px;
+        }
+
+        &-bars {
+            &:before {
+                margin: 4px 0px;
+                .menuBars;
+            }
+            &:after {
+                margin: 4px 0px;
+                .menuBars;
+            }
+        }
+
+        &.is-open {
+            position: absolute;
+            top: -@menuPadding;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100vh;
+            background: @menuGray;
+            padding: 40px @menuPadding;
+            width: 100vw;
+            z-index: @z-mobile-nav-menu;
+
+            .header__menu-list {
+                margin: 20px 0 0 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .header__menu-link {
+                color: #fff;
+
+                a {
+                    color: #fff;
+                    display: block;
+                    .font-deca;
+                    height: 100px;
+                    line-height: 100px;
+                    text-align: center;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    &:hover { text-decoration: none; }
+                }
+
+                &--home, &--close {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 10px;
+                }
+
+                &--home {
+
+                    left: @menuPadding;
+
+                    a {
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+
+                &--close {
+                    .font-deca;
+                    right: @menuPadding;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        a {
+            display: block;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__links {
+        float: right;
+    }
+}

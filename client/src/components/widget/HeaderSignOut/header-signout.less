@@ -1,0 +1,73 @@
+/*
+ * Retailer Header - Header (header.less)
+ * Created: 11 DEC 2015
+ *
+ * Reqs: Header for retailer portal
+ *
+ * Author: Clayton Huthwaite <Clayton.Huthwaite@asurion.com>
+ * CSS dependencies: Bootstrap is used to reveal mobile nav button
+ *
+ */
+
+@import (reference) "../../style/imports";
+@signout-border: 3px solid #e5e5e5;
+@signout-width: 150px;
+
+.header .header__signout {
+
+    margin: 0 auto;
+    position: relative;
+    width: @signout-width;
+
+    &-list {
+        background: #fff;
+        border: @signout-border;
+        border-radius: 3px;
+        list-style: none;
+        margin: 10px auto 0;
+        padding: 0;
+        position: absolute;
+        text-align:center;
+        width: @signout-width;
+        z-index: @z-signout-links;
+
+        &:before {
+            background: transparent url('icon-signout-arrow.png') no-repeat;
+            content: " ";
+            display: block;
+            height: 10px;
+            margin: -9px auto 0;
+            width: 13px;
+        }
+    }
+
+    &-item {
+        display: block;
+        border-bottom: @signout-border;
+
+        &:last-child {
+            border: 0;
+        }
+
+        a {
+            display: block;
+            .font-deci;
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+
+    &-icon {
+        height: 40px;
+        width: 40px;
+        display: block;
+        border: @signout-border;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+}

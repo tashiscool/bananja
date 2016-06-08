@@ -1,0 +1,393 @@
+From a cell phone Samsung Note II
+
+
+perf.html:21 1 items in store
+perf.html:63 listener triggered on object change 2
+perf.html:63 add object with 10 keys 150
+perf.html:63 listener triggered on object change 72
+perf.html:63 add object with 100 keys 210
+perf.html:63 get object with 100 keys 16
+perf.html:63 add another key 0
+perf.html:63 get another key 1
+perf.html:63 add 1000 items 933
+perf.html:35 -------------------------------
+perf.html:21 1114 items in store
+perf.html:63 listener triggered on object change 6
+perf.html:63 add object with 10 keys 16
+perf.html:63 listener triggered on object change 36
+perf.html:63 add object with 100 keys 74
+perf.html:63 get object with 100 keys 9
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 199
+perf.html:35 -------------------------------
+perf.html:21 2227 items in store
+perf.html:63 listener triggered on object change 8
+perf.html:63 add object with 10 keys 26
+perf.html:63 listener triggered on object change 13
+perf.html:63 add object with 100 keys 56
+perf.html:63 get object with 100 keys 12
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 156
+perf.html:35 -------------------------------
+perf.html:21 3340 items in store
+perf.html:63 listener triggered on object change 12
+perf.html:63 add object with 10 keys 38
+perf.html:63 listener triggered on object change 17
+perf.html:63 add object with 100 keys 54
+perf.html:63 get object with 100 keys 120
+perf.html:63 add another key 0
+perf.html:63 get another key 1
+perf.html:63 add 1000 items 174
+perf.html:35 -------------------------------
+perf.html:21 4453 items in store
+perf.html:63 listener triggered on object change 18
+perf.html:63 add object with 10 keys 43
+perf.html:63 listener triggered on object change 20
+perf.html:63 add object with 100 keys 67
+perf.html:63 get object with 100 keys 20
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 157
+perf.html:35 -------------------------------
+perf.html:21 5566 items in store
+perf.html:63 listener triggered on object change 20
+perf.html:63 add object with 10 keys 53
+perf.html:63 listener triggered on object change 27
+perf.html:63 add object with 100 keys 80
+perf.html:63 get object with 100 keys 24
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 143
+perf.html:35 -------------------------------
+perf.html:21 6679 items in store
+perf.html:63 listener triggered on object change 26
+perf.html:63 add object with 10 keys 62
+perf.html:63 listener triggered on object change 27
+perf.html:63 add object with 100 keys 83
+perf.html:63 get object with 100 keys 29
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 146
+perf.html:35 -------------------------------
+perf.html:21 7792 items in store
+perf.html:63 listener triggered on object change 31
+perf.html:63 add object with 10 keys 69
+perf.html:63 listener triggered on object change 36
+perf.html:63 add object with 100 keys 102
+perf.html:63 get object with 100 keys 31
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 147
+perf.html:35 -------------------------------
+perf.html:21 8905 items in store
+perf.html:63 listener triggered on object change 31
+perf.html:63 add object with 10 keys 81
+perf.html:63 listener triggered on object change 42
+perf.html:63 add object with 100 keys 137
+perf.html:63 get object with 100 keys 48
+perf.html:63 add another key 1
+perf.html:63 get another key 1
+perf.html:63 add 1000 items 158
+perf.html:35 -------------------------------
+perf.html:21 10018 items in store
+perf.html:63 listener triggered on object change 40
+perf.html:63 add object with 10 keys 87
+perf.html:63 listener triggered on object change 35
+perf.html:63 add object with 100 keys 128
+perf.html:63 get object with 100 keys 176
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 285
+perf.html:35 -------------------------------
+perf.html:21 11131 items in store
+perf.html:63 listener triggered on object change 40
+perf.html:63 add object with 10 keys 87
+perf.html:63 listener triggered on object change 43
+perf.html:63 add object with 100 keys 113
+perf.html:63 get object with 100 keys 40
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 152
+perf.html:35 -------------------------------
+perf.html:21 12244 items in store
+perf.html:63 listener triggered on object change 47
+perf.html:63 add object with 10 keys 129
+perf.html:63 listener triggered on object change 46
+perf.html:63 add object with 100 keys 125
+perf.html:63 get object with 100 keys 43
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 202
+perf.html:35 -------------------------------
+perf.html:21 13357 items in store
+perf.html:63 listener triggered on object change 54
+perf.html:63 add object with 10 keys 251
+perf.html:63 listener triggered on object change 51
+perf.html:63 add object with 100 keys 136
+perf.html:63 get object with 100 keys 50
+perf.html:63 add another key 0
+perf.html:63 get another key 2
+perf.html:63 add 1000 items 145
+perf.html:35 -------------------------------
+perf.html:21 14470 items in store
+perf.html:63 listener triggered on object change 70
+perf.html:63 add object with 10 keys 133
+perf.html:63 listener triggered on object change 62
+perf.html:63 add object with 100 keys 168
+perf.html:63 get object with 100 keys 179
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 165
+perf.html:35 -------------------------------
+perf.html:21 15583 items in store
+perf.html:63 listener triggered on object change 50
+perf.html:63 add object with 10 keys 115
+perf.html:63 listener triggered on object change 55
+perf.html:63 add object with 100 keys 141
+perf.html:63 get object with 100 keys 56
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 255
+perf.html:35 -------------------------------
+perf.html:21 16696 items in store
+perf.html:63 listener triggered on object change 58
+perf.html:63 add object with 10 keys 125
+perf.html:63 listener triggered on object change 60
+perf.html:63 add object with 100 keys 236
+perf.html:63 get object with 100 keys 57
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 158
+perf.html:35 -------------------------------
+perf.html:21 17809 items in store
+perf.html:63 listener triggered on object change 70
+perf.html:63 add object with 10 keys 146
+perf.html:63 listener triggered on object change 64
+perf.html:63 add object with 100 keys 166
+perf.html:63 get object with 100 keys 72
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 141
+perf.html:35 -------------------------------
+perf.html:21 18922 items in store
+perf.html:63 listener triggered on object change 63
+perf.html:63 add object with 10 keys 152
+perf.html:63 listener triggered on object change 64
+perf.html:63 add object with 100 keys 178
+perf.html:63 get object with 100 keys 69
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 140
+perf.html:35 -------------------------------
+perf.html:21 20035 items in store
+perf.html:63 listener triggered on object change 69
+perf.html:63 add object with 10 keys 146
+perf.html:63 listener triggered on object change 68
+perf.html:63 add object with 100 keys 181
+perf.html:63 get object with 100 keys 72
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 184
+perf.html:35 -------------------------------
+perf.html:21 21148 items in store
+perf.html:63 listener triggered on object change 74
+perf.html:63 add object with 10 keys 156
+perf.html:63 listener triggered on object change 77
+perf.html:63 add object with 100 keys 222
+perf.html:63 get object with 100 keys 74
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 251
+perf.html:35 -------------------------------
+perf.html:21 22261 items in store
+perf.html:63 listener triggered on object change 104
+perf.html:63 add object with 10 keys 194
+perf.html:63 listener triggered on object change 77
+perf.html:63 add object with 100 keys 204
+perf.html:63 get object with 100 keys 78
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 141
+perf.html:35 -------------------------------
+perf.html:21 23374 items in store
+perf.html:63 listener triggered on object change 79
+perf.html:63 add object with 10 keys 172
+perf.html:63 listener triggered on object change 86
+perf.html:63 add object with 100 keys 218
+perf.html:63 get object with 100 keys 78
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 140
+perf.html:35 -------------------------------
+perf.html:21 24487 items in store
+perf.html:63 listener triggered on object change 81
+perf.html:63 add object with 10 keys 180
+perf.html:63 listener triggered on object change 81
+perf.html:63 add object with 100 keys 315
+perf.html:63 get object with 100 keys 86
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 160
+perf.html:35 -------------------------------
+perf.html:21 25600 items in store
+perf.html:63 listener triggered on object change 87
+perf.html:63 add object with 10 keys 295
+perf.html:63 listener triggered on object change 89
+perf.html:63 add object with 100 keys 222
+perf.html:63 get object with 100 keys 123
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 141
+perf.html:35 -------------------------------
+perf.html:21 26713 items in store
+perf.html:63 listener triggered on object change 103
+perf.html:63 add object with 10 keys 239
+perf.html:63 listener triggered on object change 151
+perf.html:63 add object with 100 keys 286
+perf.html:63 get object with 100 keys 136
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 187
+perf.html:35 -------------------------------
+perf.html:21 27826 items in store
+perf.html:63 listener triggered on object change 101
+perf.html:63 add object with 10 keys 214
+perf.html:63 listener triggered on object change 99
+perf.html:63 add object with 100 keys 241
+perf.html:63 get object with 100 keys 206
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 145
+perf.html:35 -------------------------------
+perf.html:21 28939 items in store
+perf.html:63 listener triggered on object change 103
+perf.html:63 add object with 10 keys 216
+perf.html:63 listener triggered on object change 110
+perf.html:63 add object with 100 keys 267
+perf.html:63 get object with 100 keys 133
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 140
+perf.html:35 -------------------------------
+perf.html:21 30052 items in store
+perf.html:63 listener triggered on object change 106
+perf.html:63 add object with 10 keys 237
+perf.html:63 listener triggered on object change 210
+perf.html:63 add object with 100 keys 355
+perf.html:63 get object with 100 keys 116
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 146
+perf.html:35 -------------------------------
+perf.html:21 31165 items in store
+perf.html:63 listener triggered on object change 197
+perf.html:63 add object with 10 keys 382
+perf.html:63 listener triggered on object change 111
+perf.html:63 add object with 100 keys 279
+perf.html:63 get object with 100 keys 108
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 155
+perf.html:35 -------------------------------
+perf.html:21 32278 items in store
+perf.html:63 listener triggered on object change 106
+perf.html:63 add object with 10 keys 242
+perf.html:63 listener triggered on object change 117
+perf.html:63 add object with 100 keys 306
+perf.html:63 get object with 100 keys 113
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 148
+perf.html:35 -------------------------------
+perf.html:21 33391 items in store
+perf.html:63 listener triggered on object change 146
+perf.html:63 add object with 10 keys 274
+perf.html:63 listener triggered on object change 120
+perf.html:63 add object with 100 keys 297
+perf.html:63 get object with 100 keys 118
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 147
+perf.html:35 -------------------------------
+perf.html:21 34504 items in store
+perf.html:63 listener triggered on object change 130
+perf.html:63 add object with 10 keys 272
+perf.html:63 listener triggered on object change 267
+perf.html:63 add object with 100 keys 436
+perf.html:63 get object with 100 keys 125
+perf.html:63 add another key 0
+perf.html:63 get another key 1
+perf.html:63 add 1000 items 142
+perf.html:35 -------------------------------
+perf.html:21 35617 items in store
+perf.html:63 listener triggered on object change 123
+perf.html:63 add object with 10 keys 261
+perf.html:63 listener triggered on object change 236
+perf.html:63 add object with 100 keys 413
+perf.html:63 get object with 100 keys 127
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 189
+perf.html:35 -------------------------------
+perf.html:21 36730 items in store
+perf.html:63 listener triggered on object change 122
+perf.html:63 add object with 10 keys 271
+perf.html:63 listener triggered on object change 139
+perf.html:63 add object with 100 keys 333
+perf.html:63 get object with 100 keys 140
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 140
+perf.html:35 -------------------------------
+perf.html:21 37843 items in store
+perf.html:63 listener triggered on object change 127
+perf.html:63 add object with 10 keys 290
+perf.html:63 listener triggered on object change 134
+perf.html:63 add object with 100 keys 473
+perf.html:63 get object with 100 keys 163
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 145
+perf.html:35 -------------------------------
+perf.html:21 38956 items in store
+perf.html:63 listener triggered on object change 163
+perf.html:63 add object with 10 keys 323
+perf.html:63 listener triggered on object change 136
+perf.html:63 add object with 100 keys 326
+perf.html:63 get object with 100 keys 141
+perf.html:63 add another key 1
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 145
+perf.html:35 -------------------------------
+perf.html:21 40069 items in store
+perf.html:63 listener triggered on object change 154
+perf.html:63 add object with 10 keys 308
+perf.html:63 listener triggered on object change 157
+perf.html:63 add object with 100 keys 480
+perf.html:63 get object with 100 keys 168
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 172
+perf.html:35 -------------------------------
+perf.html:21 41182 items in store
+perf.html:63 listener triggered on object change 222
+perf.html:63 add object with 10 keys 469
+perf.html:63 listener triggered on object change 183
+perf.html:63 add object with 100 keys 446
+perf.html:63 get object with 100 keys 153
+perf.html:63 add another key 21
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 179
+perf.html:35 -------------------------------
+perf.html:21 42295 items in store
+perf.html:63 listener triggered on object change 157
+perf.html:63 add object with 10 keys 327
+perf.html:63 listener triggered on object change 145
+perf.html:63 add object with 100 keys 363
+perf.html:63 get object with 100 keys 154
+perf.html:63 add another key 0
+perf.html:63 get another key 0
+perf.html:63 add 1000 items 274
+perf.html:35 -------------------------------

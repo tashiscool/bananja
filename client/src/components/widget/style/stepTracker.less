@@ -1,0 +1,100 @@
+/*
+ * Retailer Step Tracker - StepTracker.js (stepTracker.less)
+ * Created: 21 DEC 2015
+ *
+ * Reqs: Step tracker for user flows.
+ *
+ * Author: Clayton Huthwaite <Clayton.Huthwaite@asurion.com>
+ * CSS dependencies: none
+ *
+ */
+
+@import (reference) "../../style/imports";
+
+@step-tracker-height: 40px;
+
+.step-tracker {
+    background-color: #333;
+    height: @step-tracker-height;
+
+    ul {
+        counter-reset: step-counter;
+        height: @step-tracker-height;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__step {
+        border-left: 2px solid #fff;
+        background-color: #ddd;
+        color: #999;
+        display: inline-block;
+        height: @step-tracker-height;
+        overflow: hidden;
+        padding: 10px 8px 10px 35px;
+        position: relative;
+
+        &.is-active, &.is-complete {
+            background-color: #333;
+            color: #333;
+
+            & .step-tracker__step-content {
+                color: #fff;
+            }
+        }
+
+        &.is-complete {
+            border: 0;
+
+            &:before {
+                content: "X";
+            }
+        }
+
+        &:before {
+            background: #fff;
+            border-radius: 50%;
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            display: inline-block;
+            .font-deci;
+            .font-bold;
+            left: 10px;
+            line-height: 16px;
+            margin-right: 5px;
+            margin-top: -9px;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            width: 18px;
+            height: 18px;
+        }
+
+        &-content {
+            color: #999;
+            cursor: default;
+            display: inline-block;
+            .font-deci;
+            line-height: 14px;
+
+            &:link, &:hover, &:active, &:visited {
+                color: #999;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.eyemed .step-tracker {
+
+    background-color: @eyemed-green-light;
+
+    &__step {
+        &.is-active, &.is-complete {
+            background-color: @eyemed-green-light;
+            color: @eyemed-green-light;
+        }
+    }
+
+}

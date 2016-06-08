@@ -1,5 +1,9 @@
+
 require('components/style/app.less');
 global.gt = require('services/Gettext');
+
+var Header = require('components/widget/Header');
+var Footer = require('components/widget/Footer');
 
 global.App = module.exports = class App extends Component {
 
@@ -7,9 +11,11 @@ global.App = module.exports = class App extends Component {
         App.history = this.props.history;
         return (
             <div className={ global.serverVars.context } role="application">
+                <Header />
                 <main role="main">
                     { this.props.children }
                 </main>
+                <Footer />
             </div>
         );
     }

@@ -1,0 +1,128 @@
+@import (reference) "imports.less";
+
+@specprotect-green: #8EC63F;
+@specprotect-green-light: #AFD67B;
+
+@specprotect-orange: #dc4405;
+@specprotect-blue: #00a3e0;
+@specprotect-blue-light: #6FC9EB;
+@specprotect-grey: #7c878e;
+
+
+#retailer {
+
+    .specprotect {
+
+        .header {
+            border-color: @specprotect-blue;
+
+            &__menu.is-open {
+                background: @specprotect-blue;
+            }
+        }
+
+        .header .header__signout {
+            &-item {
+                a { color: @specprotect-blue }
+            }
+        }
+
+        .btn {
+
+            &:focus {
+                outline: @specprotect-blue;
+            }
+
+            &.btn--primary {
+                background:@specprotect-orange;
+
+                &:hover {
+                    background:@specprotect-orange;
+                }
+            }
+
+            &.btn--primary-outline {
+                color: @specprotect-orange;
+                border-color:@specprotect-orange;
+
+                &:hover {
+                    color: @specprotect-orange;
+                    border-color:@specprotect-orange;
+                }
+            }
+
+            &.btn--secondary-outline {
+                color: @specprotect-grey;
+                border-color: @specprotect-grey;
+            }
+        }
+
+        .landing-row {
+            &--enroll {
+                .btn.btn--primary {
+                    background-color: @specprotect-orange;
+                }
+            }
+            &--demo {
+                &__prop-title {
+                    color: @specprotect-blue;
+                }
+            }
+        }
+
+        .tabs.tabs--progress {
+            background-color: @specprotect-blue-light;
+
+            .tabs__link {
+                &.is-active, &.is-complete {
+                    background-color: @specprotect-blue-light;
+                    .tabs__link-step {
+                        color: @specprotect-blue-light;
+                    }
+                }
+            }
+        }
+
+        .card.card--dashboard a {
+            border-color: @specprotect-blue;
+        }
+
+        .card--customer {
+            &__action {
+                color: @specprotect-orange;
+            }
+
+            &__footer {
+                &-toggle {
+                    color: @specprotect-blue;
+                }
+                &-edit {
+                   color: @specprotect-orange;
+                }
+            }
+        }
+
+        .btn-icon {
+            background: @specprotect-orange;
+
+            &--cancel {
+                background: transparent;
+                border-color: @specprotect-blue;
+                color: @specprotect-blue;
+            }
+        }
+
+        .product-row {
+            &__status-message { color: @specprotect-blue; }
+            &.is-expired .product-row__status-message { color: @specprotect-grey; }
+        }
+
+        .tbl-responsive {
+            th { background: @specprotect-blue; }
+        }
+
+        .footer {
+            .info-btn__trigger-text, a { color: @specprotect-orange; }
+        }
+    }
+}

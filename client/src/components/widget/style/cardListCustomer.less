@@ -1,0 +1,28 @@
+/*
+ * Customer card list - CardListCustomer.js
+ * Created: 14 JAN 2016
+ *
+ * Reqs: List of Customer cards for lookup screen. Included empty state and no results found state.
+ * Usage sample:
+ * <div class="card-list card-list--customer">
+ *
+ * Author: Clayton Huthwaite <clayton.huthwaite@asurion.com>
+ * CSS dependencies: none
+ * REACT: CardListCustomer.js
+ */
+@import "../../style/imports";
+
+.card-list--customers {
+    &__header {
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        @media @tablet-up {
+            .btn {
+                margin-left: 20px;
+                float: right;
+            }
+        }
+    }
+
+}
