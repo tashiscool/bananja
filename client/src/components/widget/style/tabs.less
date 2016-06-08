@@ -1,0 +1,144 @@
+/*
+ * Tabs (tabs.less)
+ * Created: 06 JAN 2016
+ *
+ * Reqs: Tabs/ProgressTabs/StepTracker styling for various flows
+ *
+ * Author: Clayton Huthwaite <Clayton.Huthwaite@asurion.com>
+ * CSS dependencies: Bootstrap is used for wrapper, and glyphicons for checkmark
+ *
+ */
+
+ @import (reference) "../../style/imports";
+@tab-light: #ddd;
+@tab-dark: #333;
+@tab-mid: #777;
+
+@tab-height: 45px;
+
+.tabs {
+    height: @tab-height;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .tabs__link {
+        background-color: #dddddd;
+        color: @tab-dark;
+        display: inline-block;
+        height: @tab-height;
+        line-height: @tab-height;
+        padding: 0 10px 0 40px;
+        position: relative;
+        text-decoration: none;
+
+        &:hover, &:visited, &:active {
+          color: @tab-dark;
+        }
+
+        &.is-active {
+          background-color: @tab-dark;
+          color: #fff;
+
+          &:hover, &:visited, &:active {
+            color: #fff;
+          }
+        }
+
+        &.is-complete {
+          background-color: @tab-mid;
+          color: #fff;
+          &:hover, &:visited, &:active {
+            color: #fff;
+          }
+        }
+
+        &-step {
+            background: #fff;
+            border-radius: 50%;
+            color: @tab-dark;
+            display: inline-block;
+            .font-deci;
+            .font-bold;
+            left: 10px;
+            line-height: 16px;
+            margin-right: 5px;
+            margin-top: -9px;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+  &.tabs--progress {
+    background: @tab-mid;
+    overflow: hidden;
+
+    .tabs__link-container {
+        &:last-child:after {
+            background: @tab-light;
+            content:"";
+            display: block;
+            height: @tab-height;
+            width: 1000px;
+            left: 98%;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    .tabs__link {
+        border-left: 2px solid #fff;
+        color: #999;
+        cursor: default;
+        .font-deci;
+        line-height: 15px;
+        overflow: visible;
+        padding-top: 7px;
+        width: 100%;
+
+        &.is-active {
+            .tabs__link-step {
+                color: @tab-dark;
+            }
+        }
+
+        &.is-complete {
+            border-color: transparent;
+            .tabs__link-step {
+                color: @tab-mid;
+            }
+        }
+
+        &-step {
+            color: #999;
+
+            .glyphicon-ok {
+                font-size: 10px;
+                line-height: 17px;
+                display: inline-block;
+                margin-left: -1px;
+            }
+        }
+    }
+
+    .tabs__link-container--2 { width: 49.9999%; }
+    .tabs__link-container--3 { width: 33.2999%; }
+    .tabs__link-container--4 { width: 24.9999%; }
+    .tabs__link-container--5 { width: 19.9999%; }
+    .tabs__link-container--6 { width: 16.5999%; }
+    .tabs__link-container--7 { width: 14.1999%; }
+    .tabs__link-container--8 { width: 12.4999%; }
+
+  }
+}

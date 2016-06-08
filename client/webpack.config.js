@@ -41,14 +41,6 @@ module.exports = {
     devtool: isProduction ? undefined : "#inline-source-map",
     resolve: {
         alias: {
-            //RS: __dirname + '/RS.js',
-            //components: __dirname + '/src/components',
-            //services: __dirname + '/src/services',
-            //style: `${__dirname}/src/style`,
-            //bootstrap: 'react-bootstrap/lib',
-            //messages: `${__dirname}/messages`,
-            //routes: `${__dirname}/src/routes`,
-            //shared: `${__dirname}/src/shared/components`
             RS: __dirname + '/RS.js',
             components: __dirname + '/src/components',
             services: __dirname + '/src/services',
@@ -75,7 +67,8 @@ module.exports = {
             Grid: 'react-bootstrap/lib/Grid',
             AppService: __dirname + '/src/services/AppService',
             PureRenderComponent: __dirname + '/src/shared/components/PureRenderComponent',
-            Component: __dirname + '/src/shared/components/Component'
+            Component: __dirname + '/src/shared/components/Component',
+            LinkTo: 'components/core/LinkTo'
         })
     ]
 };

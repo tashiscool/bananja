@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "name": "Footer",
+  "main": "./Footer.js",
+  "version": "0.0.1"
+}

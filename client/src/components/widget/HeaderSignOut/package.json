@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "name": "HeaderSignOut",
+  "main": "./HeaderSignOut.js",
+  "version": "0.0.1"
+}

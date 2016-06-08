@@ -1,0 +1,92 @@
+@import (reference) "font-sizes";
+
+:root { font-size: 62.5% }
+
+@media @mobile{
+    :root { font-size: 60% }
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+fieldset,
+p, span,
+table,
+pre,
+hr {
+    font-smoothing:         antialiased !important;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering:         optimizeLegibility !important;
+    -webkit-text-rendering: optimizeLegibility !important;
+}
+
+body {
+    background-color: @body-background-color;
+    color:            @body-color;
+    font-family:      'Source Sans Pro', Arial, sans-serif;
+    .font-prime;
+    line-height:      1.1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:       @body-color;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: 300;
+    margin-top:  0;
+    word-wrap:   break-word;
+}
+
+h1 {
+    .font-alpha;
+}
+
+h2 {
+    .font-gamma;
+}
+
+h3 {
+    .font-delta;
+}
+
+h4 {
+    .font-delta;
+}
+
+h5 {
+    .font-epsilon;
+}
+
+h6 {
+    .font-epsilon;
+}
+
+p {
+    .font-prime;
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    font-weight: normal !important;
+    color:       #333;
+}
+
+hr {
+    margin-top:    0;
+    margin-bottom: 20px;
+    width:         100%;
+
+    &.hr--thick {
+        display:       inline-block;
+        margin-top:    25px;
+        margin-bottom: 40px;
+    }
+}
+
+.no-bold { font-weight: normal !important; }
+
+.capitalize-first-letter:first-letter { text-transform: capitalize; }
+
+.no-wrap {
+    overflow:      hidden;
+    text-overflow: ellipsis;
+    white-space:   nowrap;
+}

@@ -1,0 +1,45 @@
+@import (reference) "font-sizes";
+
+@app-content-top-padding:40px;
+@app-content-bottom-padding:50px;
+
+// Media queries
+//---------------------------------------
+@mobile: ~'screen and (max-width: 767px)';
+@tablet: ~'screen and (min-width: 768px) and (max-width: 990px)';
+@desktop: ~'screen and (min-width: 991px)';
+@tablet-min: ~'screen and (min-width: 768px)';
+
+@mobile-up: ~'screen and (min-width: 320px)';
+@tablet-up: ~'screen and (min-width: 768px)';
+@tablet-down: ~'screen and (max-width: 990px)';
+
+
+/*MIXINS*/
+.background-radial(@color1, @color2) {
+    background: @color1;
+    background: -moz-radial-gradient(center, ellipse cover,  @color1 0%, @color2 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
+    background: radial-gradient(ellipse at center,  @color1 0%,@color2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
+}
+
+.font-bold(){
+    font-weight: 700;
+}
+
+/*Z-INDEX*/
+@z-content: 1;
+@z-sidebarnav: 10;
+@z-signout-links: 15;
+@z-mobile-nav-menu: 1000;
+
+/*COLORS*/
+@body-color: #555;
+@main-body-background: #f4f4f4;
+@yellow-warning:#FDF8E4;
+@red-danger:#dd0000;
+@blue-info:blue;
+@green-success:green;
+
+@a-blue: #13b5ea;

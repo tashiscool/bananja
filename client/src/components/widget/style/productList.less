@@ -1,0 +1,35 @@
+/*
+ * Product List - ProductList.js (productList.less)
+ * Created: 19 JAN 2016
+ *
+ * Reqs: List of products - to contain product rows.
+ * Usage sample:
+ * <div class="product-list">
+ *
+ * Author: Clayton Huthwaite <clayton.huthwaite@asurion.com>
+ * CSS dependencies: none
+ * REACT: CardListCustomers.js, CardCustomer.js, ProductList.js, ProductRow.js
+ */
+
+.product-list {
+    padding: 10px 0;
+
+    .product-row {
+        border-bottom: 1px solid #ccc;
+
+        margin-bottom: 30px;
+
+        .media-block {
+            margin-bottom: 25px;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+
+            .media-block {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

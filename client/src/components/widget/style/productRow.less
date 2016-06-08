@@ -1,0 +1,66 @@
+/*
+ * Product Row - ProductRow.js (productRow.less)
+ * Created: 19 JAN 2016
+ *
+ * Reqs: Row of product data - icon, title, id, price, etc.
+ * Usage sample:
+ * <div class="product-row">
+ * <p className="product-row__title">Product</p>
+ * <p className="product-row__id">ID</p>
+ * <p className="product-row__price">Price</p>
+ *
+ * Author: Clayton Huthwaite <clayton.huthwaite@asurion.com>
+ * CSS dependencies: MediaBlock component
+ * REACT: relies on patlib/MediaBlock - eg.CardListCustomers.js, CardCustomer.js, ProductList.js, ProductRow.js
+ */
+
+@import "../../style/imports";
+
+.product-row {
+    margin-bottom: 20px;
+
+    &.is-expired {
+        opacity: .4;
+        .product-row__status-message {
+            color: #333;
+        }
+    }
+
+    .media-block {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        .font-prime;
+        margin-bottom: 5px;
+    }
+
+    &__id {
+        color: #999;
+        .font-deci;
+        margin-bottom: 5px;
+    }
+
+    &__price {
+        .font-deci;
+        margin-bottom: 5px;
+    }
+
+    &__actions {
+        @media @tablet-up {
+            float: right;
+        }
+
+        .btn-icon {
+            margin-top: 10px;
+        }
+    }
+
+    &__status-message {
+        padding-top: 15px;
+    }
+
+    &__cancel {
+        margin-left: 15px;
+    }
+}

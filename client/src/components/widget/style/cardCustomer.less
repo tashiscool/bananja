@@ -1,0 +1,93 @@
+/*
+ * Customer Card - CardCustomer.js (cardCustomer.less)
+ * Created: 15 JAN 2016
+ *
+ * Reqs: Display an interactive card with customer information
+ * Usage sample:
+ * <section class="card--customer">
+ *
+ * Author: Clayton Huthwaite <clayton.huthwaite@asurion.com>
+ * CSS dependencies: none
+ * REACT: CardListCustomers.js, CardCustomer.js
+ */
+@import "../../style/imports";
+
+@card-pad-tb:15px;
+@card-pad-lr:20px;
+@card-border: 1px solid #ccc;
+
+.card--customer {
+    background: #fff;
+    border: @card-border;
+    border-bottom: 3px solid #ccc;
+    margin-bottom: 30px;
+
+    &__header {
+        padding: @card-pad-tb @card-pad-lr 0;
+        position: relative;
+    }
+
+    &__name {
+        border-bottom: @card-border;
+        margin-bottom: @card-pad-tb;
+        padding: 3px 0 15px;
+    }
+
+    &__action {
+        cursor: pointer;
+        line-height: 25px;
+        position: absolute;
+        text-decoration: none;
+        top: @card-pad-tb;
+        right: @card-pad-lr;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+
+    &__info {
+        padding: 0 @card-pad-lr;
+    }
+
+    &__body {
+        display: none;
+    }
+
+    &__footer {
+        border-top: @card-border;
+        padding: @card-pad-tb @card-pad-lr;
+        position: relative;
+        text-align: center;
+
+        &-toggle {
+            cursor: pointer;
+            .font-deci;
+
+            .glyphicon {
+                color: #999;
+                padding: 0 10px 0;
+                top: 3px;
+            }
+        }
+
+        &-edit {
+            cursor: pointer;
+            .font-deci;
+            position: absolute;
+            right: @card-pad-lr;
+            text-decoration: underline;
+            top: @card-pad-tb;
+        }
+    }
+
+    &.is-open {
+        .card--customer__body {
+            border-top: @card-border;
+            display: block;
+            margin: 0 @card-pad-lr;
+            padding: @card-pad-tb;
+        }
+    }
+}

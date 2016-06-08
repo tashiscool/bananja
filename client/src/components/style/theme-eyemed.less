@@ -1,0 +1,128 @@
+@import (reference) "imports.less";
+
+@eyemed-green: #8EC63F;
+@eyemed-green-light: #AFD67B;
+
+@eyemed-orange: #dc4405;
+@eyemed-blue: #00a3e0;
+@eyemed-blue-light: #6FC9EB;
+@eyemed-grey: #7c878e;
+
+
+#retailer {
+
+    .eyemed {
+
+        .header {
+            border-color: @eyemed-blue;
+
+            &__menu.is-open {
+                background: @eyemed-blue;
+            }
+        }
+
+        .header .header__signout {
+            &-item {
+                a { color: @eyemed-blue }
+            }
+        }
+
+        .btn {
+
+            &:focus {
+                outline: @eyemed-blue;
+            }
+
+            &.btn--primary {
+                background:@eyemed-orange;
+
+                &:hover {
+                    background:@eyemed-orange;
+                }
+            }
+
+            &.btn--primary-outline {
+                color: @eyemed-orange;
+                border-color:@eyemed-orange;
+
+                &:hover {
+                    color: @eyemed-orange;
+                    border-color:@eyemed-orange;
+                }
+            }
+
+            &.btn--secondary-outline {
+                color: @eyemed-grey;
+                border-color: @eyemed-grey;
+            }
+        }
+
+        .landing-row {
+            &--enroll {
+                .btn.btn--primary {
+                    background-color: @eyemed-orange;
+                }
+            }
+            &--demo {
+                &__prop-title {
+                    color: @eyemed-blue;
+                }
+            }
+        }
+
+        .tabs.tabs--progress {
+            background-color: @eyemed-blue-light;
+
+            .tabs__link {
+                &.is-active, &.is-complete {
+                    background-color: @eyemed-blue-light;
+                    .tabs__link-step {
+                        color: @eyemed-blue-light;
+                    }
+                }
+            }
+        }
+
+        .card.card--dashboard a {
+            border-color: @eyemed-blue;
+        }
+
+        .card--customer {
+            &__action {
+                color: @eyemed-orange;
+            }
+
+            &__footer {
+                &-toggle {
+                    color: @eyemed-blue;
+                }
+                &-edit {
+                   color: @eyemed-orange;
+                }
+            }
+        }
+
+        .btn-icon {
+            background: @eyemed-orange;
+
+            &--cancel {
+                background: transparent;
+                border-color: @eyemed-blue;
+                color: @eyemed-blue;
+            }
+        }
+
+        .product-row {
+            &__status-message { color: @eyemed-blue; }
+            &.is-expired .product-row__status-message { color: @eyemed-grey; }
+        }
+
+        .tbl-responsive {
+            th { background: @eyemed-blue; }
+        }
+
+        .footer {
+            .info-btn__trigger-text, a { color: @eyemed-orange; }
+        }
+    }
+}

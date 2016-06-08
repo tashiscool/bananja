@@ -1,0 +1,56 @@
+/*
+ * Retailer Footer - Footer (footer.less)
+ * Created: 14 DEC 2015
+ *
+ * Reqs: Footer for retailer portal
+ *
+ * Author: Clayton Huthwaite <Clayton.Huthwaite@asurion.com>
+ * CSS dependencies: Bootstrap is used for basic layout
+ *
+ */
+
+ @import (reference) "../../style/imports";
+
+ .footer {
+    color: #fff;
+    padding: 50px 0 60px;
+    text-align: center;
+    clear: both;
+    background: #333;
+
+    &__links {
+        margin: 0 0 5px;
+        overflow: hidden;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: block;
+            margin: 0 0 8px 0;
+
+            a { .font-deci; }
+        }
+    }
+    &__copyright {
+        margin-bottom: 12px;
+        .font-deci;
+    }
+
+    &__logo {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+
+        &__links {
+            li {
+                float: left;
+                margin: 0 8px 0 0;
+            }
+        }
+    }
+ }
